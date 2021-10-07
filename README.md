@@ -4,7 +4,7 @@
 
 ## Usage
 
-1. Set up a Spotify developer application
+1. Set up a Spotify developer application. Add a redirect URI of `http://localhost:11234`
 2. Enter the following information in `config.json`:
 
 ```json
