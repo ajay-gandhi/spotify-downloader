@@ -1,6 +1,9 @@
 {
   "dependencies": {
-    "spotify-web-api-node": "^5.0.2"
+    "mime-types": "^2.1.33",
+    "spotify-web-api-node": "^5.0.2",
+    "youtube-api-v3-search": "^1.2.1",
+    "ytdl-core": "^4.9.1"
   },
   "name": "spotify-downloader",
   "description": "> Download your Spotify liked songs through YT",
