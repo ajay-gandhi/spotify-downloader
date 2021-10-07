@@ -21,8 +21,8 @@ console.log(authorizeURL);
 
 /***************************** Step 2: Get tokens *****************************/
 const server = http.createServer((request, response) => {
-  if (request.url.startsWith("/callback")) {
-    const query = url.parse(request.url, true).query;
+  const query = url.parse(request.url, true).query;
+  if (query.code) {
     console.log("Received authorization code:", query.code);
 
     // Retrieve an access token and a refresh token
@@ -32,13 +32,14 @@ const server = http.createServer((request, response) => {
       config.refresh_token = data.body["refresh_token"];
       fs.writeFileSync(`${__dirname}/config.json`, JSON.stringify(config, null, 2));
       console.log("Successfully retrieved tokens!");
+      response.end("Tokens received, you may close this window.");
       process.exit(0);
     }, (err) => {
       console.log("Something went wrong!", err);
+      response.end("Error retrieving tokens. Check logs.");
       process.exit(1);
     });
   }
-  response.end();
 });
 
 server.listen(PORT);
