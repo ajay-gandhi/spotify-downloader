@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "spotify-web-api-node": "^5.0.2"
+  },
+  "name": "spotify-downloader",
+  "description": "> Download your Spotify liked songs through YT",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "node app.js"
+  },
+  "keywords": [
+    "spotify",
+    "download",
+    "youtube",
+    "music"
+  ],
+  "author": "Ajay Gandhi",
+  "license": "ISC"
+}
